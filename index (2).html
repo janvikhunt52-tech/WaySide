@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wayside – a travel journal</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#f7f9f6;--ink:#10372c;--mute:#55705f;--line:#cfdcd2;--green:#0f4c3a;--sun:#f2c230;--on-green:#f7f9f6;--card:#ffffff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c1f19;--ink:#e8f1ea;--mute:#9bb5a4;--line:#23443a;--green:#14624b;--card:#12292f}}
+:root[data-theme="dark"]{--bg:#0c1f19;--ink:#e8f1ea;--mute:#9bb5a4;--line:#23443a;--green:#14624b;--card:#12292f}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 "DM Sans",system-ui,sans-serif}
+.hero{background:var(--green);color:var(--on-green);padding:56px 20px 64px}
+.in{max-width:900px;margin:0 auto}
+.brand{font:500 1rem "DM Sans",sans-serif;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.brand a{color:var(--on-green);margin-left:16px;text-decoration:none;border-bottom:2px solid var(--sun)}
+h1{font:400 clamp(3rem,13vw,8rem)/.95 "DM Serif Display",Georgia,serif;margin:48px 0 16px}
+.hero p{max-width:44ch;font-size:1.1rem;margin:0}
+.route{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.stop{background:var(--sun);color:#10372c;padding:6px 14px;border-radius:99px;font-weight:700;font-size:.9rem}
+main{padding:40px 20px}
+h2{font:400 2rem "DM Serif Display",Georgia,serif;margin:0 0 20px}
+.entry{display:grid;grid-template-columns:110px 1fr;gap:20px;padding:24px 0;border-top:1px solid var(--line)}
+.day{font:400 2.6rem/1 "DM Serif Display",serif;color:var(--green)}
+.day small{display:block;font:500 .8rem "DM Sans",sans-serif;color:var(--mute);margin-top:6px}
+.entry h3{font:400 1.6rem/1.2 "DM Serif Display",serif;margin:0 0 6px}
+.entry p{margin:0 0 8px;max-width:60ch}
+.tip{background:var(--card);border-left:5px solid var(--sun);padding:10px 14px;margin-top:10px;max-width:60ch}
+@media (max-width:560px){.entry{grid-template-columns:1fr;gap:8px}}
+.packing{background:var(--card);border:1px solid var(--line);padding:22px;border-radius:12px}
+.packing label{display:flex;gap:10px;align-items:center;padding:6px 0;cursor:pointer}
+.packing input{width:20px;height:20px;accent-color:var(--green)}
+.packing input:checked+span{text-decoration:line-through;color:var(--mute)}
+#count{color:var(--mute);margin:12px 0 0;font-weight:500}
+footer{padding:30px 20px;border-top:1px solid var(--line);color:var(--mute);text-align:center}
+a:focus-visible,input:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+</style>
+</head>
+<body>
+<header class="hero"><div class="in">
+<div class="brand"><strong>Wayside</strong><span><a href="#log">Trip log</a><a href="#pack">Packing list</a></span></div>
+<h1>Slow travel, short notes.</h1>
+<p>A journal of small trips: where I went, what it cost in time, and the one thing worth doing there.</p>
+<div class="route" aria-label="Places on this trip"><span class="stop">Udaipur</span><span class="stop">Kumbhalgarh</span><span class="stop">Ranakpur</span></div>
+</div></header>
+
+<main><div class="in">
+<h2 id="log">Trip log: Rajasthan, 5 days</h2>
+<article class="entry"><div class="day">Day 1<small>Udaipur</small></div><div>
+<h3>Lakes at golden hour</h3>
+<p>Walk the old city in the morning when it is quiet. Save the lakeside for the last hour of light.</p>
+<div class="tip"><b>Tip:</b> Book a boat ride for sunset, not midday. The heat is much easier.</div></div></article>
+<article class="entry"><div class="day">Day 2<small>Udaipur</small></div><div>
+<h3>City Palace and a slow lunch</h3>
+<p>Go when it opens. Afterwards, eat somewhere with a rooftop and stay longer than planned.</p></div></article>
+<article class="entry"><div class="day">Day 3<small>Kumbhalgarh</small></div><div>
+<h3>The long wall</h3>
+<p>The fort wall winds across the hills for miles. Wear good shoes and carry water.</p>
+<div class="tip"><b>Tip:</b> Start before 8 am to beat the crowds and the sun.</div></div></article>
+<article class="entry"><div class="day">Day 4<small>Ranakpur</small></div><div>
+<h3>Carved marble, quiet halls</h3>
+<p>The Jain temple has over a thousand carved pillars, and no two look the same. Cover your shoulders and knees.</p></div></article>
+<article class="entry"><div class="day">Day 5<small>Home</small></div><div>
+<h3>Write it down</h3>
+<p>Before the details fade, note the best meal, the best view and the one thing you'd skip next time.</p></div></article>
+
+<h2 id="pack" style="margin-top:48px">Packing list</h2>
+<div class="packing">
+<label><input type="checkbox"><span>Comfortable walking shoes</span></label>
+<label><input type="checkbox"><span>Water bottle</span></label>
+<label><input type="checkbox"><span>Sunscreen and a hat</span></label>
+<label><input type="checkbox"><span>Light scarf or shawl for temples</span></label>
+<label><input type="checkbox"><span>Power bank and charger</span></label>
+<label><input type="checkbox"><span>Printed copy of bookings</span></label>
+<p id="count" role="status"></p>
+</div>
+</div></main>
+
+<footer>© 2026 Wayside. Travel lightly, notice more.</footer>
+<script>
+var boxes=document.querySelectorAll('.packing input'),out=document.getElementById('count');
+function upd(){var n=0;boxes.forEach(function(b){if(b.checked)n++});out.textContent=n+' of '+boxes.length+' packed';}
+boxes.forEach(function(b){b.addEventListener('change',upd)});upd();
+</script>
+</body>
+</html>
